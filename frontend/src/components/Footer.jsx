@@ -4,7 +4,7 @@ import { AiOutlineMail } from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <footer className="bg-violet-400 text-gray-300 py-8">
+    <footer className="bg-violet-400 text-blue-800 py-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
@@ -47,7 +47,7 @@ const Footer = () => {
           </div>
           <div>
             <h2 className="text-lg font-bold mb-4">Follow Us</h2>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 items-center sm:justify-start justify-center">
               <a
                 href="https://github.com/shemanages"
                 target="_blank"

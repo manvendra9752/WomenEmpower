@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 import signupHero from "../images/login-hero.gif";
 
 function Signup() {
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -29,10 +29,11 @@ function Signup() {
         console.log(res.data);
         if (res.data) {
           toast.success("Signup Successfully..");
+
+          localStorage.setItem("Users", JSON.stringify(res.data.user));
+          navigate("/");
+          window.location.reload();
         }
-        localStorage.setItem("Users", JSON.stringify(res.data.user));
-        Navigate("/");
-        window.location.reload();
       })
       .catch((err) => {
         if (err.response) {

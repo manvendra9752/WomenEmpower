@@ -24,12 +24,12 @@ function Login() {
       .then((res) => {
         console.log(res.data);
         if (res.data) {
-          toast.success("LoggedIn Successfully");
+          toast.success("Logged In Successfully");
           localStorage.setItem("Users", JSON.stringify(res.data.user));
+          navigate("/");
+          window.location.reload();
         }
         console.log("auth ", authUser);
-
-        navigate("/");
       })
       .catch((err) => {
         if (err.response) {
