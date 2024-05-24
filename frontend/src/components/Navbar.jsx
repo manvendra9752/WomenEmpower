@@ -6,7 +6,7 @@ import Logout from "../pages/Logout";
 
 function Navbar() {
   const [authUser, setAuthUser] = useAuth();
-  const [active, setActive] = useState("Resources");
+  const [active, setActive] = useState("Home");
 
   return (
     <nav
@@ -14,7 +14,11 @@ function Navbar() {
     20"
     >
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
-        <Link className="text-2xl font-bold text-pink-600" to="/">
+        <Link
+          className="text-2xl font-bold text-pink-600 hover:text-pink-500 hover:border-2 hover:border-pink-400 duration-300 p-2 m-1 rounded-3xl"
+          to="/"
+          onClick={() => setActive("Home")}
+        >
           SheManages
         </Link>
         <button
@@ -144,7 +148,7 @@ function Navbar() {
       <div className="md:hidden hidden" id="mobile-menu">
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <Link
-            className="text-gray-800 hover:text-gray-600 px-3 rounded-md py-2 hover:bg-pink-300"
+            className="block text-gray-800 rounded-md px-3 py-2"
             to="/"
             onClick={() => setActive("Home")}
           >
@@ -156,7 +160,7 @@ function Navbar() {
             )}
           </Link>
           <Link
-            className="block text-gray-800 hover:bg-pink-300 rounded-md px-3 py-2"
+            className="block text-gray-800 rounded-md px-3 py-2"
             to="/resources"
             onClick={() => setActive("Resources")}
           >
@@ -168,7 +172,7 @@ function Navbar() {
             )}
           </Link>
           <Link
-            className="block text-gray-800 hover:bg-pink-300 rounded-md px-3 py-2"
+            className="block text-gray-800  rounded-md px-3 py-2"
             to="/products"
             onClick={() => setActive("Products")}
           >
@@ -180,7 +184,7 @@ function Navbar() {
             )}
           </Link>
           <Link
-            className="block text-gray-800 hover:bg-pink-300 rounded-md px-3 py-2"
+            className="block text-gray-800  rounded-md px-3 py-2"
             to="/ideas"
             onClick={() => setActive("Ideas")}
           >
@@ -194,7 +198,7 @@ function Navbar() {
 
           {authUser ? (
             <Link
-              className="block text-gray-800 hover:bg-pink-300 rounded-md px-3 py-2"
+              className="block text-gray-800  rounded-md px-3 py-2"
               to="/addproduct"
               onClick={() => setActive("Add Item")}
             >
@@ -211,7 +215,7 @@ function Navbar() {
 
           {authUser ? (
             <Link
-              className="block text-gray-800 hover:bg-pink-300 rounded-md px-3 py-2"
+              className="block text-gray-800  rounded-md px-3 py-2"
               to={`products/myproduct/${authUser._id}`}
               onClick={() => setActive("My Profile")}
             >

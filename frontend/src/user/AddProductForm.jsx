@@ -10,10 +10,9 @@ const AddProductForm = () => {
   const userId = authUser._id;
   const username = authUser.username;
   const profile = authUser.profile;
-  //   console.log(userId);
 
   const [name, setName] = useState("");
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("clothes");
   const [price, setPrice] = useState("");
   const [imageUrl, setImageUrl] = useState("");
 
@@ -32,7 +31,7 @@ const AddProductForm = () => {
       });
       toast.success(response.data.message);
       setName("");
-      setCategory("");
+      setCategory("clothes");
       setPrice("");
       setImageUrl("");
       navigate("/");
@@ -42,44 +41,83 @@ const AddProductForm = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto bg-white p-5 mt-16 rounded-lg shadow-md ">
-      <h2 className="text-2xl font-bold mb-4 ">Add New Product</h2>
+    <div className="max-w-lg mx-auto bg-white p-8 mt-16 rounded-lg shadow-lg">
+      <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">
+        Add New Product
+      </h2>
       <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label className="block text-gray-700">Product Name</label>
+        <div className="mb-6">
+          <label className="block text-gray-700 font-medium mb-2">
+            Product Name
+          </label>
           <input
             type="text"
-            className="w-full px-3 py-2 border rounded-lg"
+            className="w-full px-4 py-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-500"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
           />
         </div>
-        <div className="mb-4">
-          <label className="block text-gray-700">Category</label>
-          <input
-            type="text"
-            className="w-full px-3 py-2 border rounded-lg"
+        <div className="mb-6">
+          <label className="block text-gray-700 font-medium mb-2">
+            Category
+          </label>
+          <select
+            className="w-full px-3 p-1 py-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-500"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             required
-          />
+          >
+            <option value="clothes" className="p-1">
+              Clothes
+            </option>
+            <option value="art & craft" className="p-1">
+              Art & Craft
+            </option>
+            <option value="painting" className="p-1">
+              Painting
+            </option>
+            <option value="pottery" className="p-1">
+              Pottery
+            </option>
+            <option value="statue" className="p-1">
+              Statue
+            </option>
+            <option value="utensils">Utensils</option>
+            <option value="food" className="p-1">
+              Food
+            </option>
+            <option value="toy" className="p-1">
+              Toy
+            </option>
+            <option value="basket" className="p-1">
+              Basket
+            </option>
+            <option value="wooden material" className="p-1">
+              Wooden Material
+            </option>
+            <option value="other" className="p-1">
+              Other
+            </option>
+          </select>
         </div>
-        <div className="mb-4">
-          <label className="block text-gray-700">Price</label>
+        <div className="mb-6">
+          <label className="block text-gray-700 font-medium mb-2">Price</label>
           <input
             type="number"
-            className="w-full px-3 py-2 border rounded-lg"
+            className="w-full px-4 py-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-500"
             value={price}
             onChange={(e) => setPrice(e.target.value)}
             required
           />
         </div>
-        <div className="mb-4">
-          <label className="block text-gray-700">Image URL</label>
+        <div className="mb-6">
+          <label className="block text-gray-700 font-medium mb-2">
+            Image URL
+          </label>
           <input
             type="text"
-            className="w-full px-3 py-2 border rounded-lg"
+            className="w-full px-4 py-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-500"
             value={imageUrl}
             onChange={(e) => setImageUrl(e.target.value)}
             required
@@ -87,7 +125,7 @@ const AddProductForm = () => {
         </div>
         <button
           type="submit"
-          className="w-full bg-pink-500 text-white py-2 rounded-lg hover:bg-pink-600"
+          className="w-full bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 rounded-lg shadow-md hover:from-pink-600 hover:to-purple-600 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-300"
         >
           Add Product
         </button>

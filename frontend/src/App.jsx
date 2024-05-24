@@ -14,9 +14,9 @@ import ProductList from "./user/ProductList";
 import { useParams } from "react-router-dom";
 import NotFound from "./notfoundpage/NotFound";
 
-const UserProducts = () => {
+const UserProducts = (del) => {
   const { userId } = useParams();
-  return <ProductList userId={userId} />;
+  return <ProductList userId={userId} del={del} />;
 };
 
 function App() {
@@ -33,11 +33,14 @@ function App() {
 
         {/* <Route path="/products/:productId" element={<Product />} /> */}
         {authUser && <Route path="/addproduct" element={<AddProductForm />} />}
-        <Route path="/products/:userId" element={<UserProducts />} />
+        <Route
+          path="/products/:userId"
+          element={<UserProducts del="false" />}
+        />
         {authUser && (
           <Route
             path="/products/myproduct/:userId"
-            element={<UserProducts />}
+            element={<UserProducts del="true" />}
           />
         )}
         <Route path="/ideas" element={<IdeaPage />} />

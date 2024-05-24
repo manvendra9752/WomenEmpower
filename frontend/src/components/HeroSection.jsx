@@ -2,52 +2,57 @@ import React from "react";
 import HeroImage from "../images/Hero Image.gif";
 // import HeroImage from "../images/hero-background.gif";
 import HeroWave from "../images/wave (10).svg";
+import { useAuth } from "../context/AuthProvider";
 // import WomenInTech1 from "../images/women_in_tech_1.jpg";
 // import WomenInTech2 from "../images/women_in_tech_2.jpg";
 
 const HeroSection = () => {
+  const [authUser, setAuthUser] = useAuth();
   return (
     <>
-      <section id="hero-section" className="max-w-screen">
+      <section id="" className="max-w-screen h-full bg-gray-50">
         {/* Hero Section */}
         <div className=" mx-auto ">
-          <div className="flex sm:flex-row flex-col items-center justify-center py-12  w-full">
+          <div className="flex sm:flex-row flex-col items-center justify-center py-12 p-2  w-full max-h-fit bg-gray-50">
             <div className="hero-intro sm:w-1/2 w-full sm:h-full sm:p-6 h-1/2">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 ">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-orange-500 mb-4 ">
                 Empowering women across communities to get started in tech
                 <span className="text-pink-600">.</span>
               </h1>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-slate-800 mb-6">
                 We see you, we hear you, and we empower you!
               </p>
               <a href="/">
-                <button className="btn btn-lg bg-pink-600 text-white px-4 sm:text-base text-sm py-1 rounded-lg hover:bg-pink-700 transition duration-200">
+                <button className="sm:h-14 h-12 min-h-8 btn-lg bg-pink-600 text-white px-6 sm:text-base text-sm rounded-lg hover:bg-pink-700 transition duration-200">
                   Learn More
                 </button>
               </a>
             </div>
-            <div className="  w-full h-full z-10 flex items-center sm:justify-end justify-center">
+            <div className="  sm:w-1/2 sm:h-[300px] h-0 w-0 z-10 flex items-center  justify-center">
               <img
-                className=" w-[100%]  max-w-fit"
+                className=" w-[100%] max-w-fit h-[400px] my-auto shadow-xl  transition-shadow shadow-pink-300 rounded-3xl"
                 src={HeroImage}
                 alt="Hero Image"
               />
             </div>
           </div>
         </div>
-        <img
-          className="hero-wave w-full"
-          src={HeroWave}
-          alt="techify-hero-wave"
-        />
+        <img className=" w-full" src={HeroWave} alt="techify-hero-wave" />
       </section>
-
+      {/* https://fortune.com/img-assets/wp-content/uploads/2021/09/GettyImages-591168857-e1631729825492.jpg?w=1440&q=75*/}
       {/* Additional Sections */}
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 mt-12">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 mt-12 ">
         {/* Section 1 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center py-12">
+          <div className="image-section ">
+            <img
+              className="max-w-full rounded-lg shadow-xl shadow-slate-400"
+              src="https://media.gettyimages.com/id/494055741/photo/rural-girl-holding-laptop-with-seniors.jpg?s=612x612&w=0&k=20&c=GP7FZVCJ0-E3Or2pmvIa0_pvwgLKIOvgB6rgomP3E8U="
+              alt="Women in Tech"
+            />
+          </div>
           <div className="text-section">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-4 ">
               Bridging the Gender Gap in Technology
             </h2>
             <p className="text-lg text-gray-600 mb-6">
@@ -61,21 +66,14 @@ const HeroSection = () => {
               </button>
             </a>
           </div>
-          <div className="image-section">
-            <img
-              className="max-w-full rounded-lg shadow-lg"
-              src="https://img.freepik.com/premium-photo/international-global-networking-concept_700248-1103.jpg"
-              alt="Women in Tech"
-            />
-          </div>
         </div>
 
         {/* Section 2 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center py-12">
-          <div className="image-section order-last md:order-first">
+          <div className="image-section order-first md:order-last w-full">
             <img
-              className="max-w-full rounded-lg shadow-lg"
-              src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d29tYW4lMjBpbiUyMHRlY2h8ZW58MHx8MHx8fDA="
+              className="max-w-full w-full  rounded-lg shadow-xl shadow-slate-500"
+              src="https://media.istockphoto.com/id/1181943751/photo/hdr-image-for-made-mat-by-loom-woman-live-in-the-countryside-making-basketwork-pallet-is-the.webp?b=1&s=170667a&w=0&k=20&c=INzlnSQgpyuopOstxy28qA0O1rFzkQlNZqasg_aC9bU="
               alt="Women Collaboration"
             />
           </div>
@@ -98,22 +96,26 @@ const HeroSection = () => {
       </div>
 
       {/* Call to Action */}
-      <div className="bg-gray-100 py-12">
-        <div className="container mx-auto px-4 md:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
-            Join Our Community
-          </h2>
-          <p className="text-lg text-gray-600 mb-6">
-            Become a part of a growing community of women in tech. Sign up today
-            to start your journey!
-          </p>
-          <a href="/signup">
-            <button className="btn bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition duration-200">
-              Sign Up
-            </button>
-          </a>
+      {authUser ? (
+        ""
+      ) : (
+        <div className="bg-gray-100 py-12">
+          <div className="container mx-auto px-4 md:px-6 lg:px-8 text-center">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+              Join Our Community
+            </h2>
+            <p className="text-lg text-gray-600 mb-6">
+              Become a part of a growing community of women in tech. Sign up
+              today to start your journey!
+            </p>
+            <a href="/signup">
+              <button className="btn bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition duration-200">
+                Sign Up
+              </button>
+            </a>
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 };

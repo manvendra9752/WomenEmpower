@@ -5,12 +5,25 @@ import { FaOpencart } from "react-icons/fa6";
 
 const DescriptionSection = () => {
   return (
-    <section id="description-section" className="py-12 bg-gray-100">
-      <div id="go-here" className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-6 text-gray-800 text-center">
+    <section
+      id="description-section"
+      className="py-12"
+      style={{
+        backgroundImage:
+          "url('https://media.istockphoto.com/id/1029301918/photo/women-painting-mud-pot.jpg?s=612x612&w=0&k=20&c=kr1O0WfxfTgkNZou-RwgGgur70aqpqxQk3zZO00aDFo=')",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+        opacity: "1",
+        height: "100%",
+      }}
+    >
+      <div id="go-here" className="container mx-auto px-4 ">
+        <h1 className="text-4xl font-bold mb-6  text-center">
           One platform for all your goals.
         </h1>
-        <p className="text-lg mb-8 text-black text-center">
+        <p className="text-lg mb-8 text-gray-100 font-normal text-center">
           This platform is designed to connect women all over the world where
           they can get all information related to tech and can share their
           ideas. They can get resources as per their need and can connect with
@@ -19,8 +32,8 @@ const DescriptionSection = () => {
           growth.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-screen-xl container mx-auto h-1/2">
-          <div className="card bg-white p-2 rounded-lg shadow-md hover:shadow-lg transition duration-200">
+        <div className="grid grid-cols-1 md:grid-cols-3 sm:gap-14 gap-10 max-w-screen-xl container mx-auto h-1/2">
+          <div className="card bg-white p-1 rounded-lg shadow-md hover:shadow-lg transition duration-200">
             <div className="card-body text-center">
               <p className="text-pink-500 mb-4">
                 <i className="fas fa-calendar-check fa-2x"></i>
@@ -41,7 +54,7 @@ const DescriptionSection = () => {
               </a>
             </div>
           </div>
-          <div className="card bg-white p-2 rounded-lg shadow-md hover:shadow-lg transition duration-200">
+          <div className="card bg-white p-1 rounded-lg shadow-md hover:shadow-lg transition duration-200">
             <div className="card-body text-center">
               <p className="text-pink-500 mb-4">
                 <i className="fas fa-shopping-cart fa-2x"></i>
@@ -60,7 +73,7 @@ const DescriptionSection = () => {
               </a>
             </div>
           </div>
-          <div className="card bg-white p-2 rounded-lg shadow-md hover:shadow-lg transition duration-200">
+          <div className="card bg-white p-1 rounded-lg shadow-md hover:shadow-lg transition duration-200">
             <div className="card-body text-center">
               <p className="text-pink-500 mb-4">
                 <i className="fas fa-search fa-2x"></i>

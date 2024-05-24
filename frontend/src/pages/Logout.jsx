@@ -14,8 +14,8 @@ const Logout = () => {
       });
       localStorage.removeItem("Users");
       toast.success("Logoout Successfully..");
-      window.location.reload();
       navigate("/");
+      window.location.reload();
     } catch (error) {
       console.log(error);
       toast.error("Error: " + error.message);

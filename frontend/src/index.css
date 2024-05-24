@@ -1,14 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kalam:wght@300;400;700&family=Teachers:ital,wght@0,400..800;1,400..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins",sans-serif;
-  
+  font-family: "Domine", serif;
+  font-weight: 500;
+  font-style: normal;  
 }
 
 
@@ -304,24 +304,25 @@ a.nav-link.px-4 {
 #description-section {
     background-color: #F5F5F9;
     text-align: center;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 }
 
 #description-section h1 {
     margin-top: 100px;
-    padding-bottom: 16px;
-    color: #35353F;
+    padding-bottom: 2px;
+    color: white;
     font-size: 32px;
     font-weight: bold;
 }
 
 #description-section p {
-    padding: 0 15%;
-    color: #35353F;
+    padding: 0 2%;
+    /* color: rgb(34, 3, 110); */
     font-size: 1.125rem;
     line-height: 1.75rem;
-    opacity: 0.9;
-    margin-bottom: 50px;
+    opacity: 2;
+    margin-bottom: 60px;
+    font-weight: 500;
 }
 
 @media only screen and (max-width: 328px) {

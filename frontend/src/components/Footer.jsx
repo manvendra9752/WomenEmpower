@@ -8,7 +8,9 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
-            <h1 className="text-2xl font-bold mb-4">SheManages</h1>
+            <h1 className="text-2xl font-bold mb-4 text-violet-950">
+              SheManages
+            </h1>
             <p className="mb-2">Empowering women to lead.</p>
             <p>
               Contact us:{" "}
@@ -47,7 +49,7 @@ const Footer = () => {
           </div>
           <div>
             <h2 className="text-lg font-bold mb-4">Follow Us</h2>
-            <div className="flex space-x-4 items-center sm:justify-start justify-center">
+            <div className="flex space-x-4 items-center md:justify-start justify-center">
               <a
                 href="https://github.com/shemanages"
                 target="_blank"
