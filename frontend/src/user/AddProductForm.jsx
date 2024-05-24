@@ -20,15 +20,18 @@ const AddProductForm = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:8080/products/add", {
-        userId,
-        name,
-        username,
-        profile,
-        category,
-        price,
-        imageUrl,
-      });
+      const response = await axios.post(
+        "https://womenempower-1.onrender.com/products/add",
+        {
+          userId,
+          name,
+          username,
+          profile,
+          category,
+          price,
+          imageUrl,
+        }
+      );
       toast.success(response.data.message);
       setName("");
       setCategory("clothes");

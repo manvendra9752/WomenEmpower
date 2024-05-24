@@ -24,7 +24,7 @@ function Signup() {
       phonenumber: data.phonenumber,
     };
     await axios
-      .post("http://localhost:8080/user/signup", userInfo)
+      .post("https://womenempower-1.onrender.com/user/signup", userInfo)
       .then((res) => {
         console.log(res.data);
         if (res.data) {

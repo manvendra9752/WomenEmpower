@@ -16,7 +16,9 @@ const IdeaPage = () => {
   useEffect(() => {
     const fetchIdeas = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/api/ideas");
+        const response = await axios.get(
+          "https://womenempower-1.onrender.com/api/ideas"
+        );
         setIdeas(response.data);
       } catch (error) {
         toast.error("Error fetching ideas");
@@ -34,7 +36,7 @@ const IdeaPage = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/ideas/submit",
+        "https://womenempower-1.onrender.com/api/ideas/submit",
         {
           name: form.name,
           email: form.email,

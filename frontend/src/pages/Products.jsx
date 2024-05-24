@@ -30,7 +30,7 @@ const Products = () => {
   const getProducts = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/products/getProducts"
+        "https://womenempower-1.onrender.com/products/getProducts"
       );
       setAllProducts(response.data);
       setFilteredProducts(response.data);

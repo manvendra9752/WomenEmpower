@@ -38,7 +38,7 @@ const ProductList = ({ userId, del }) => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/products/user/${userId}`
+          `https://womenempower-1.onrender.com/products/user/${userId}`
         );
         setProducts(response.data);
         toast.success("Products fetched successfully...");
@@ -51,7 +51,7 @@ const ProductList = ({ userId, del }) => {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/user/getClickedUserdata/${userId}`
+          `https://womenempower-1.onrender.com/user/getClickedUserdata/${userId}`
         );
         setUserData(response.data);
         setEditFormData({
@@ -78,7 +78,7 @@ const ProductList = ({ userId, del }) => {
   const handleDelete = async (productId) => {
     try {
       const res = await axios.delete(
-        `http://localhost:8080/products/delete/${productId}`
+        `https://womenempower-1.onrender.com/products/delete/${productId}`
       );
       if (res.status === 200) {
         toast.success("Product deleted successfully...");
@@ -103,7 +103,7 @@ const ProductList = ({ userId, del }) => {
     e.preventDefault();
     try {
       const res = await axios.put(
-        `http://localhost:8080/user/updateProfile/${userId}`,
+        `https://womenempower-1.onrender.com/user/updateProfile/${userId}`,
         editFormData
       );
       if (res.status === 200) {
