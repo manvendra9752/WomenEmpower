@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Resource from "../images/resources-hero.png";
 // import axios from "axios";
 import { FaArrowsAlt } from "react-icons/fa";
-
+import threegirl from "../images/threegirl.jpg";
 const Resources = () => {
   const [scholarships, setScholarships] = useState([]);
 
@@ -60,9 +60,8 @@ const Resources = () => {
     <div
       className="p-12 min-h-screen"
       style={{
-        backgroundImage:
-          "url('https://www.shutterstock.com/image-vector/rural-women-providing-tailoring-training-empowerment-2249656557')",
-        backgroundPosition: "top",
+        backgroundImage: { threegirl },
+        backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "fixed",
