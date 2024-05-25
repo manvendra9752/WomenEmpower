@@ -15,7 +15,7 @@ function Navbar() {
     >
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         <Link
-          className="text-2xl font-bold text-pink-600 hover:text-pink-500 hover:border-2 hover:border-pink-400 duration-300 p-2 m-1 rounded-3xl"
+          className="text-2xl font-bold text-pink-600 hover:text-pink-500 hover:border-2 hover:border-pink-400 duration-300 p-1 mr-2 ml-0 m-1 rounded-3xl"
           to="/"
           onClick={() => setActive("Home")}
         >

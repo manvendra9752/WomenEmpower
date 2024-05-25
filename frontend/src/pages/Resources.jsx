@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Resource from "../images/resources-hero.png";
-import axios from "axios";
+// import axios from "axios";
+import { FaArrowsAlt } from "react-icons/fa";
 
 const Resources = () => {
   const [scholarships, setScholarships] = useState([]);
@@ -85,21 +86,24 @@ const Resources = () => {
         </div>
       </section>
 
-      <section id="scholarships" className="py-12">
+      <section id="" className="py-12">
         <div className="container mx-auto px-4">
-          <h1 className="text-3xl font-bold mb-6 text-gray-800 text-center">
+          <h1 className="sm:text-4xl text-2xl font-extrabold mb-8 text-pink-600 text-center">
             Scholarships & Yojanas
           </h1>
-          <ul className="list-disc list-inside space-y-4">
+          <ul className="space-y-4">
             {scholarships.map((scholarship, index) => (
-              <li key={index} className="text-lg text-gray-700">
+              <li
+                key={index}
+                className="sm:text-lg text-base my-auto text-gray-700 bg-slate-100 h-20 rounded-lg shadow-md overflow-hidden"
+              >
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
                   href={scholarship.link}
-                  className="text-blue-500 hover:text-blue-700 transition duration-200"
+                  className="flex items-center justify-start h-full w-full text-blue-800 hover:text-white hover:bg-gradient-to-r from-purple-500 to-violet-500 transform hover:scale-105 transition duration-300 p-2"
                 >
-                  {scholarship.name} ↗️
+                  <FaArrowsAlt className="m-1" /> {scholarship.name} ↗️
                 </a>
               </li>
             ))}

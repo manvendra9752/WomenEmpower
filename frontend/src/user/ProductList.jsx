@@ -319,12 +319,14 @@ const ProductList = ({ userId, del }) => {
                   </a>
                 </div>
               </div>
-              <button
-                onClick={() => setIsEditing(true)}
-                className="bg-blue-500 text-white px-4 py-1 rounded-full hover:bg-blue-600 transition duration-300 mt-4 sm:text-base text-sm"
-              >
-                Edit Profile
-              </button>
+              {checkdelete === "true" && (
+                <button
+                  onClick={() => setIsEditing(true)}
+                  className="bg-blue-500 text-white px-4 py-1 rounded-full hover:bg-blue-600 transition duration-300 mt-4 sm:text-base text-sm"
+                >
+                  Edit Profile
+                </button>
+              )}
             </div>
           </>
         )}
