@@ -59,13 +59,24 @@ const IdeaPage = () => {
   };
 
   return (
-    <div>
-      <section className="bg-pink-200 py-12">
+    <div
+      style={{
+        backgroundImage:
+          "url('https://img.freepik.com/free-photo/international-women-s-day-celebration-equal-right-digital-art-style_23-2151368413.jpg?size=626&ext=jpg')",
+        backgroundPosition: "top",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+        opacity: "1",
+        height: "100%",
+      }}
+    >
+      <section className=" bg-transparent py-12">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+          <h1 className="text-4xl font-bold text-slate-300 mb-4">
             Empowering Ideas
           </h1>
-          <p className="text-lg text-gray-700 mb-6">
+          <p className="text-lg text-slate-200 mb-6">
             Share your innovative ideas and inspire others. Together, we can
             make a difference.
           </p>
@@ -77,9 +88,9 @@ const IdeaPage = () => {
         </div>
       </section>
 
-      <section className="py-12 bg-gray-100">
+      <section className="py-12 ">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+          <h2 className="text-3xl font-bold text-blue-500 mb-8 text-center">
             Featured Ideas
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -104,7 +115,7 @@ const IdeaPage = () => {
         </div>
       </section>
 
-      <section id="submit-idea" className="bg-pink-200 py-12">
+      <section id="submit-idea" className="bg-pink-200 opacity-85 py-12">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">
             Submit Your Idea

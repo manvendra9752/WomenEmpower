@@ -55,10 +55,22 @@ const Resources = () => {
     };
     fetchScholarships();
   }, []);
-
+  //www.shutterstock.com/image-vector/pottery-pot-making-wife-village-man-2340274675
   return (
-    <div className="p-12 bg-gradient-to-r from-pink-50 via-white to-purple-50 min-h-screen">
-      <section className="bg-white shadow-md rounded-lg p-6 mb-12">
+    <div
+      className="p-12 min-h-screen"
+      style={{
+        backgroundImage:
+          "url('https://www.shutterstock.com/image-vector/rural-women-providing-tailoring-training-empowerment-2249656557')",
+        backgroundPosition: "top",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+        opacity: "1",
+        height: "100%",
+      }}
+    >
+      <section className=" shadow-md rounded-lg p-6 mb-12">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center">
             <div className="lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0">
